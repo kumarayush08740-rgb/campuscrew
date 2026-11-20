@@ -1,0 +1,1982 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+3 0 obj
+<< /Length 2884 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PROJECT LAUNCH & MASTER ARCHITECTURE) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (CampusCrew - Platform Master Specification) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Where Local Businesses Meet Creators, and Talent Turns Into Opportunity) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Core Identity) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Platform Core Mission) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Bridge local businesses & brands with) Tj ET
+BT /F2 9.5 Tf 76 337 Td (hyperlocal micro-influencers.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Provide verified conversion tracking \(QR &) Tj ET
+BT /F2 9.5 Tf 76 305 Td (Coupon redemptions\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Protect creators with transparent) Tj ET
+BT /F2 9.5 Tf 76 273 Td (agreements, milestones & payouts.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Engineered as a high-performance,) Tj ET
+BT /F2 9.5 Tf 76 241 Td (real-world full-stack web application.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Phased Delivery) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Dual Phasing Strategy) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Phase 1: Dual Creator & Business) Tj ET
+BT /F2 9.5 Tf 521 337 Td (Marketplace \(20 Modules\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Phase 2: Modular Student Talent Hub &) Tj ET
+BT /F2 9.5 Tf 521 305 Td (Certificate Engine \(6 Modules\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Admin Governance & Audit Center for) Tj ET
+BT /F2 9.5 Tf 521 273 Td (platform-wide dispute handling.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Production-ready data integrity with zero) Tj ET
+BT /F2 9.5 Tf 521 241 Td (fake analytics or fake escrow.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 1 of 20) Tj ET
+Q
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 4335 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (SYSTEM ARCHITECTURE & TECH STACK) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Modern Full-Stack Technical Stack) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Modular, Scalable, Secure & Reactive Architecture) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 270 345 re S
+0.11 0.17 0.30 rg 50 370 270 40 re f
+0.22 0.35 0.65 rg 225 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 230 386 Td (Frontend) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Frontend & UI Layer) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Next.js 14 / React 18 with) Tj ET
+BT /F2 9.5 Tf 76 337 Td (TypeScript for type-safe) Tj ET
+BT /F2 9.5 Tf 76 324 Td (components.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (Tailwind CSS with custom) Tj ET
+BT /F2 9.5 Tf 76 292 Td (design tokens \(Clean startup) Tj ET
+BT /F2 9.5 Tf 76 279 Td (aesthetic\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (Lucide React Icons + Framer) Tj ET
+BT /F2 9.5 Tf 76 247 Td (Motion for subtle,) Tj ET
+BT /F2 9.5 Tf 76 234 Td (purposeful micro-animations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 215 Td (Fully responsive viewport) Tj ET
+BT /F2 9.5 Tf 76 202 Td (system: Desktop, Laptop,) Tj ET
+BT /F2 9.5 Tf 76 189 Td (Tablet & Mobile.) Tj ET
+0.08 0.12 0.22 rg 345 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 345 65 270 345 re S
+0.11 0.17 0.30 rg 345 370 270 40 re f
+0.22 0.35 0.65 rg 520 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 525 386 Td (Backend & DB) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 359 385 Td (Backend, DB & Real-Time) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 350 Td (Node.js API Routes /) Tj ET
+BT /F2 9.5 Tf 371 337 Td (Express REST endpoints with) Tj ET
+BT /F2 9.5 Tf 371 324 Td (server-side validation.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 305 Td (PostgreSQL / SQLite with) Tj ET
+BT /F2 9.5 Tf 371 292 Td (Prisma ORM \(18 relational) Tj ET
+BT /F2 9.5 Tf 371 279 Td (models\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 260 Td (WebSockets / Polling) Tj ET
+BT /F2 9.5 Tf 371 247 Td (fallback for real-time) Tj ET
+BT /F2 9.5 Tf 371 234 Td (messaging & alerts.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 215 Td (Zod schema validation on) Tj ET
+BT /F2 9.5 Tf 371 202 Td (every single API route and) Tj ET
+BT /F2 9.5 Tf 371 189 Td (mutation.) Tj ET
+0.08 0.12 0.22 rg 640 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 640 65 270 345 re S
+0.11 0.17 0.30 rg 640 370 270 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Security) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 654 385 Td (Auth, Security & Storage) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 350 Td (Bcrypt password hashing &) Tj ET
+BT /F2 9.5 Tf 666 337 Td (JWT / HTTP-only secure) Tj ET
+BT /F2 9.5 Tf 666 324 Td (session cookies.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 305 Td (Strict Role-Based Access) Tj ET
+BT /F2 9.5 Tf 666 292 Td (Control \(RBAC\) guards on all) Tj ET
+BT /F2 9.5 Tf 666 279 Td (protected routes.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 260 Td (Safe media/portfolio upload) Tj ET
+BT /F2 9.5 Tf 666 247 Td (validation with strict MIME) Tj ET
+BT /F2 9.5 Tf 666 234 Td (& size limits.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 215 Td (No API keys, credentials,) Tj ET
+BT /F2 9.5 Tf 666 202 Td (or private addresses exposed) Tj ET
+BT /F2 9.5 Tf 666 189 Td (to frontend.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 2 of 20) Tj ET
+Q
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 4312 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (AUTHENTICATION & ROLES) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (User Roles & Access Control Matrix) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Role-Based Permissions & Strict Multi-Tenant Data Isolation) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 270 345 re S
+0.11 0.17 0.30 rg 50 370 270 40 re f
+0.22 0.35 0.65 rg 225 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 230 386 Td (Business) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Role A: Business / Brand) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Create business entity,) Tj ET
+BT /F2 9.5 Tf 76 337 Td (location, category & budget) Tj ET
+BT /F2 9.5 Tf 76 324 Td (profile.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (Post campaigns,) Tj ET
+BT /F2 9.5 Tf 76 292 Td (browse/shortlist creators,) Tj ET
+BT /F2 9.5 Tf 76 279 Td (review inbound bids.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (Generate unique tracking) Tj ET
+BT /F2 9.5 Tf 76 247 Td (QR/Coupons & view verifiable) Tj ET
+BT /F2 9.5 Tf 76 234 Td (ROI dashboards.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 215 Td (Sign collaboration) Tj ET
+BT /F2 9.5 Tf 76 202 Td (contracts & submit) Tj ET
+BT /F2 9.5 Tf 76 189 Td (post-completion ratings.) Tj ET
+0.08 0.12 0.22 rg 345 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 345 65 270 345 re S
+0.11 0.17 0.30 rg 345 370 270 40 re f
+0.22 0.35 0.65 rg 520 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 525 386 Td (Creator) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 359 385 Td (Role B: Content Creator) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 350 Td (Build verified media kit:) Tj ET
+BT /F2 9.5 Tf 371 337 Td (niche, location, verified) Tj ET
+BT /F2 9.5 Tf 371 324 Td (handles & portfolio.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 305 Td (Browse campaigns, submit) Tj ET
+BT /F2 9.5 Tf 371 292 Td (tailored proposals with) Tj ET
+BT /F2 9.5 Tf 371 279 Td (deliverables & fees.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 260 Td (Access Collaboration Hub to) Tj ET
+BT /F2 9.5 Tf 371 247 Td (submit drafts, log revisions) Tj ET
+BT /F2 9.5 Tf 371 234 Td (& track pay.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 215 Td (Build transparent) Tj ET
+BT /F2 9.5 Tf 371 202 Td (reputation score based on) Tj ET
+BT /F2 9.5 Tf 371 189 Td (reliable deliveries.) Tj ET
+0.08 0.12 0.22 rg 640 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 640 65 270 345 re S
+0.11 0.17 0.30 rg 640 370 270 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Super Admin) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 654 385 Td (Role C: Super Administrator) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 350 Td (Full system oversight:) Tj ET
+BT /F2 9.5 Tf 666 337 Td (dispute mediation &) Tj ET
+BT /F2 9.5 Tf 666 324 Td (verification reviews.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 305 Td (Audit log of all sensitive) Tj ET
+BT /F2 9.5 Tf 666 292 Td (admin mutations & fraud) Tj ET
+BT /F2 9.5 Tf 666 279 Td (flags.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 260 Td (Content moderation) Tj ET
+BT /F2 9.5 Tf 666 247 Td (\(reports, reviews,) Tj ET
+BT /F2 9.5 Tf 666 234 Td (campaigns, portfolios\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 215 Td (Feature-flag toggle for) Tj ET
+BT /F2 9.5 Tf 666 202 Td (Student Talent Hub modular) Tj ET
+BT /F2 9.5 Tf 666 189 Td (activation.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 3 of 20) Tj ET
+Q
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2852 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 1 & 2) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Profiles & Smart Creator Discovery) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Rich Digital Media Kits & Granular Marketplace Filtering) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 1) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 1: User Profile Ecosystem) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Business Profile: Category, bio, logo, past) Tj ET
+BT /F2 9.5 Tf 76 337 Td (campaigns, reviews received.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Creator Media Kit: Niche, primary) Tj ET
+BT /F2 9.5 Tf 76 305 Td (platforms, audience demographic tags.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Portfolio showcase: Verified video/reel) Tj ET
+BT /F2 9.5 Tf 76 273 Td (embeds, previous campaign stats.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Privacy Guarantee: Residential addresses) Tj ET
+BT /F2 9.5 Tf 76 241 Td (never exposed publicly.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 2) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 2: Smart Discovery Engine) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Granular Multi-Filter: Location, category,) Tj ET
+BT /F2 9.5 Tf 521 337 Td (budget bracket, platform.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Engagement rate & audience relevance) Tj ET
+BT /F2 9.5 Tf 521 305 Td (weighting.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Side-by-side Creator Comparison tray) Tj ET
+BT /F2 9.5 Tf 521 273 Td (\(rates, deliverables, past ratings\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (One-click 'Send Direct Collaboration' or) Tj ET
+BT /F2 9.5 Tf 521 241 Td ('Add to Saved Shortlist'.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 4 of 20) Tj ET
+Q
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2874 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 3 & 4) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Hyperlocal Matching & Budget Intelligence) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Geographic Proximity Engine & Algorithmic Campaign Planning) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 3) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 3: Hyperlocal Matching Engine) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Proximity calculation between business) Tj ET
+BT /F2 9.5 Tf 76 337 Td (location & creator radius.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Audience verification transparency:) Tj ET
+BT /F2 9.5 Tf 76 305 Td (Self-reported vs Verified flags.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Cross-matching of campaign target) Tj ET
+BT /F2 9.5 Tf 76 273 Td (neighborhood with creator reach.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (High relevance weighting for local) Tj ET
+BT /F2 9.5 Tf 76 241 Td (community impact.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 4) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 4: Budget-to-Campaign Intelligence) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Input budget, objective \(Footfall, Brand) Tj ET
+BT /F2 9.5 Tf 521 337 Td (Awareness, Sales\), and niche.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Dynamic creator bundle recommendations) Tj ET
+BT /F2 9.5 Tf 521 305 Td (fitting the exact budget.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Clear disclaimer: Outcome estimates are) Tj ET
+BT /F2 9.5 Tf 521 273 Td (models, never guarantees.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Pre-configured deliverable packages \(e.g.,) Tj ET
+BT /F2 9.5 Tf 521 241 Td (2 Reels + 3 Stories + 1 Event Visit\).) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 5 of 20) Tj ET
+Q
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 3131 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 5 & 6) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Campaign Marketplace & Opportunity Score) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (End-to-End Campaign Lifecycle & Multi-Factor Compatibility Scoring) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 5) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 5: Campaign Marketplace) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Campaign creation: Title, objective,) Tj ET
+BT /F2 9.5 Tf 76 337 Td (budget, niche, deliverables, deadline.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Supports both Paid & Barter collaboration) Tj ET
+BT /F2 9.5 Tf 76 305 Td (models.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Strict 9-State Lifecycle: Draft ->) Tj ET
+BT /F2 9.5 Tf 76 273 Td (Published -> Applications Open -> Under) Tj ET
+BT /F2 9.5 Tf 76 260 Td (Review -> Accepted -> In Progress ->) Tj ET
+BT /F2 9.5 Tf 76 247 Td (Submitted -> Completed -> Cancelled.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 228 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 228 Td (Creators apply with proposed deliverables,) Tj ET
+BT /F2 9.5 Tf 76 215 Td (timeline & pricing.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 6) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 6: Creator Opportunity Score) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Transparent 0-100 score shown to businesses) Tj ET
+BT /F2 9.5 Tf 521 337 Td (on every applicant.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Scoring Factors: Location match \(25%\),) Tj ET
+BT /F2 9.5 Tf 521 305 Td (Niche \(25%\), Budget \(20%\), Reliability &) Tj ET
+BT /F2 9.5 Tf 521 292 Td (On-Time delivery \(20%\), Engagement Quality) Tj ET
+BT /F2 9.5 Tf 521 279 Td (\(10%\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 260 Td (Zero follower-bias: Micro-creators with) Tj ET
+BT /F2 9.5 Tf 521 247 Td (high engagement rank top.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 228 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 228 Td (Clear 'Why this Creator Matches' bulleted) Tj ET
+BT /F2 9.5 Tf 521 215 Td (justification breakdown.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 6 of 20) Tj ET
+Q
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2891 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 7 & 8) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Collaboration Hub & Secure Messaging) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Central Workspace for Execution, Deliverable Approval & Communication) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 7) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 7: Collaboration Management Hub) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Dedicated shared workspace for every) Tj ET
+BT /F2 9.5 Tf 76 337 Td (accepted campaign contract.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Scope agreement: Deliverable checklist,) Tj ET
+BT /F2 9.5 Tf 76 305 Td (deadline countdown, revision tracker.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Content Submission Portal: Creator uploads) Tj ET
+BT /F2 9.5 Tf 76 273 Td (draft reel/post links.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Two-stage Approval Flow: Business approves) Tj ET
+BT /F2 9.5 Tf 76 241 Td (or requests revision with notes.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 8) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 8: Messaging & Notification Center) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Contextual Direct Messaging attached to) Tj ET
+BT /F2 9.5 Tf 521 337 Td (specific collaborations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Read receipts, message timestamps & file) Tj ET
+BT /F2 9.5 Tf 521 305 Td (attachment support.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Automated alerts: Proposal received, draft) Tj ET
+BT /F2 9.5 Tf 521 273 Td (submitted, revision requested.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Deadline countdown warnings \(48h, 24h) Tj ET
+BT /F2 9.5 Tf 521 241 Td (before submission cutoff\).) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 7 of 20) Tj ET
+Q
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2872 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 9 & 10) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Conversion Tracking & ROI Dashboard) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Real-World Attribution: QR Codes, Creator Coupons & Clear Analytics) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 9) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 9: Campaign Conversion Tracking) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Unique SVG/PNG QR Code generator for) Tj ET
+BT /F2 9.5 Tf 76 337 Td (in-store footfall tracking.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Creator-specific promo codes \(e.g.,) Tj ET
+BT /F2 9.5 Tf 76 305 Td (CREW-SARAH-15\) for checkout attribution.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Strict funnel distinction: Scan != Lead !=) Tj ET
+BT /F2 9.5 Tf 76 273 Td (Redeemed Sale.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Prevents false attribution: Scans logged) Tj ET
+BT /F2 9.5 Tf 76 241 Td (separately from transactions.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 10) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 10: Campaign ROI Dashboard) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Visual charts: Spend vs Verified) Tj ET
+BT /F2 9.5 Tf 521 337 Td (Conversions over campaign lifetime.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Cost Per Acquisition \(CPA\) & Cost Per) Tj ET
+BT /F2 9.5 Tf 521 305 Td (Verified Lead calculations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Creator performance breakdown: Compare) Tj ET
+BT /F2 9.5 Tf 521 273 Td (which creator drove top results.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Exportable PDF/CSV summary reports for) Tj ET
+BT /F2 9.5 Tf 521 241 Td (business accounting.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 8 of 20) Tj ET
+Q
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 2850 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 11 & 12) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Trust System & Mutual Reviews) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Two-Way Accountability, Verified Badges & Anti-Abuse Safeguards) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 11) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 11: Verification & Trust System) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Social profile verification with connected) Tj ET
+BT /F2 9.5 Tf 76 337 Td (profile URL checks.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Visual badge distinctions: 'Verified) Tj ET
+BT /F2 9.5 Tf 76 305 Td (Business' & 'Verified Creator'.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Portfolio proof check: Admin-approved past) Tj ET
+BT /F2 9.5 Tf 76 273 Td (collaboration links.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Flagging mechanism for suspect engagement) Tj ET
+BT /F2 9.5 Tf 76 241 Td (or fake follower spikes.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 12) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 12: Mutual Ratings & Reviews) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Two-way reviews: Business rates creator,) Tj ET
+BT /F2 9.5 Tf 521 337 Td (creator rates business.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Gated to Completed Collaborations only:) Tj ET
+BT /F2 9.5 Tf 521 305 Td (Zero fake reviews possible.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (One review per collaboration to prevent) Tj ET
+BT /F2 9.5 Tf 521 273 Td (rating manipulation.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Rating metrics: Communication, Timeliness,) Tj ET
+BT /F2 9.5 Tf 521 241 Td (Content Quality, Payment.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 9 of 20) Tj ET
+Q
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 2867 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 13 & 14) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Creator Protection & Deal Management) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Transparent Collaboration Agreements & Transparent Payment Records) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 13) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 13: Creator Protection System) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Standardized Collaboration Agreement) Tj ET
+BT /F2 9.5 Tf 76 337 Td (generated on contract acceptance.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Enforced revision cap \(Default: 2) Tj ET
+BT /F2 9.5 Tf 76 305 Td (revisions\) preventing scope creep.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Clear cancellation policy: Partial) Tj ET
+BT /F2 9.5 Tf 76 273 Td (compensation for work already drafted.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Built-in Dispute Escalation button) Tj ET
+BT /F2 9.5 Tf 76 241 Td (submitting ticket to Super Admin.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 14) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 14: Payment & Deal Management) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Deal ledger: Tracks Pending, In-Progress,) Tj ET
+BT /F2 9.5 Tf 521 337 Td (Released, and Paid fees.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Transaction reference number &) Tj ET
+BT /F2 9.5 Tf 521 305 Td (invoice/receipt generation.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Zero fake escrow: Clearly labels milestone) Tj ET
+BT /F2 9.5 Tf 521 273 Td (release states.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Card data compliance: PCI-compliant gateway) Tj ET
+BT /F2 9.5 Tf 521 241 Td (integration hooks.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 10 of 20) Tj ET
+Q
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 2881 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 15 & 16) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Multi-Creator Bundles & Open Bids) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Multi-Talent Campaign Management & Open Reverse-Auction Bidding) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 15) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 15: Multi-Creator Campaign Bundles) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Aggregate 2-10 creators under a single) Tj ET
+BT /F2 9.5 Tf 76 337 Td (umbrella brand campaign.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Unified campaign budget breakdown with) Tj ET
+BT /F2 9.5 Tf 76 305 Td (individual creator allocations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Consolidated timeline & deliverable) Tj ET
+BT /F2 9.5 Tf 76 273 Td (master-schedule for brand managers.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Aggregated campaign analytics dashboard) Tj ET
+BT /F2 9.5 Tf 76 241 Td (combining all creator reach.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 16) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 16: Open Collaboration Bids) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Reverse RFP: Business publishes target) Tj ET
+BT /F2 9.5 Tf 521 337 Td (problem and budget ceiling.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Creators pitch unique creative angles,) Tj ET
+BT /F2 9.5 Tf 521 305 Td (content hooks & custom prices.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Business compares incoming pitches) Tj ET
+BT /F2 9.5 Tf 521 273 Td (side-by-side in bid review tray.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Direct 1-click contract acceptance and) Tj ET
+BT /F2 9.5 Tf 521 241 Td (conversion to active project.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 11 of 20) Tj ET
+Q
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 2899 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 17 & 18) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (AI Content Brief Generator & Dashboards) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Smart Creative Ideation & Role-Tailored Command Centers) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 17) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 17: Content Brief Generator) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Input category, target audience, and) Tj ET
+BT /F2 9.5 Tf 76 337 Td (campaign objective.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Generates 3 Reel hooks, storyboards,) Tj ET
+BT /F2 9.5 Tf 76 305 Td (caption concepts & CTA suggestions.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Reliable fallback engine: 50+ curated) Tj ET
+BT /F2 9.5 Tf 76 273 Td (high-converting local templates.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (AI Integration hook ready \(Gemini API\) with) Tj ET
+BT /F2 9.5 Tf 76 241 Td (zero-failure offline mode.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 18) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 18: Dual Role-Specific Dashboards) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Business Dashboard: Spend tracker, active) Tj ET
+BT /F2 9.5 Tf 521 337 Td (collabs, conversion stats, quick-hire.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Creator Dashboard: Incoming campaign) Tj ET
+BT /F2 9.5 Tf 521 305 Td (invites, active deadlines, pending payouts.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Real-time summary widgets: Unread messages,) Tj ET
+BT /F2 9.5 Tf 521 273 Td (tasks requiring review.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Fast action buttons: 'Post New Campaign' /) Tj ET
+BT /F2 9.5 Tf 521 241 Td ('Browse Matching Gigs'.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 12 of 20) Tj ET
+Q
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 2876 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (PHASE 1 - MODULES 19 & 20) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Discovery Map & Favourites / Repeat Gigs) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Interactive Geographic Search & Fast-Track Re-Hiring Workflows) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Module 19) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module 19: Local Creator Discovery Map) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Interactive Leaflet/Map view pinning) Tj ET
+BT /F2 9.5 Tf 76 337 Td (creators by neighborhood / campus.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Privacy First: Pins reflect city/locality) Tj ET
+BT /F2 9.5 Tf 76 305 Td (center, never exact residences.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Hover cards display creator niche,) Tj ET
+BT /F2 9.5 Tf 76 273 Td (engagement score & starting rates.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Radius slider \(1km, 5km, 15km, 30km\)) Tj ET
+BT /F2 9.5 Tf 76 241 Td (centered on business storefront.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Module 20) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Module 20: Favourites & Repeat Deals) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Create customized creator shortlists \(e.g.) Tj ET
+BT /F2 9.5 Tf 521 337 Td ('Weekend Cafe Promos'\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Past Collaboration History: One-click) Tj ET
+BT /F2 9.5 Tf 521 305 Td ('Re-Hire for New Campaign'.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Pre-filled deliverables based on successful) Tj ET
+BT /F2 9.5 Tf 521 273 Td (previous collaborations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Special repeat-client rate negotiation) Tj ET
+BT /F2 9.5 Tf 521 241 Td (options.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 13 of 20) Tj ET
+Q
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 4421 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (FUTURE EXPANSION - MODULES 21 TO 26) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Modular Student Talent Hub) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Independent Subsystem: Freelance Gigs, Micro-Services & Verified Certificates) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 270 345 re S
+0.11 0.17 0.30 rg 50 370 270 40 re f
+0.22 0.35 0.65 rg 225 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 230 386 Td (Modular) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Modules 21 & 22: Gigs & Skill Match) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Freelance catalog: Video) Tj ET
+BT /F2 9.5 Tf 76 337 Td (Editing, Reels, Graphic) Tj ET
+BT /F2 9.5 Tf 76 324 Td (Design, Captions, Socials.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (Businesses & Creators can) Tj ET
+BT /F2 9.5 Tf 76 292 Td (hire student talent for) Tj ET
+BT /F2 9.5 Tf 76 279 Td (post-production.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (Skill-based matching engine) Tj ET
+BT /F2 9.5 Tf 76 247 Td (filtering by software, tools) Tj ET
+BT /F2 9.5 Tf 76 234 Td (& availability.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 215 Td (Student portfolio cards) Tj ET
+BT /F2 9.5 Tf 76 202 Td (featuring verified) Tj ET
+BT /F2 9.5 Tf 76 189 Td (Figma/Canva/Drive links.) Tj ET
+0.08 0.12 0.22 rg 345 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 345 65 270 345 re S
+0.11 0.17 0.30 rg 345 370 270 40 re f
+0.22 0.35 0.65 rg 520 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 525 386 Td (Certificates) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 359 385 Td (Modules 23 & 24: Certificate Engine) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 350 Td (Verified Experience) Tj ET
+BT /F2 9.5 Tf 371 337 Td (Certificates issued upon) Tj ET
+BT /F2 9.5 Tf 371 324 Td (successful project approval.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 305 Td (Unique Certificate ID +) Tj ET
+BT /F2 9.5 Tf 371 292 Td (tamper-proof verification) Tj ET
+BT /F2 9.5 Tf 371 279 Td (page with QR code.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 260 Td (Student profile showcases) Tj ET
+BT /F2 9.5 Tf 371 247 Td (certified work hours & skill) Tj ET
+BT /F2 9.5 Tf 371 234 Td (ratings.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 215 Td (Zero fake certificates:) Tj ET
+BT /F2 9.5 Tf 371 202 Td (Locked until client submits) Tj ET
+BT /F2 9.5 Tf 371 189 Td (final sign-off.) Tj ET
+0.08 0.12 0.22 rg 640 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 640 65 270 345 re S
+0.11 0.17 0.30 rg 640 370 270 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Growth Hub) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 654 385 Td (Modules 25 & 26: Retainers & Growth) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 350 Td (Monthly social media) Tj ET
+BT /F2 9.5 Tf 666 337 Td (packages: Hire student teams) Tj ET
+BT /F2 9.5 Tf 666 324 Td (on monthly retainers.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 305 Td (Shared content calendar) Tj ET
+BT /F2 9.5 Tf 666 292 Td (with scheduled deliverable) Tj ET
+BT /F2 9.5 Tf 666 279 Td (milestones.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 260 Td (Student Opportunity Hub:) Tj ET
+BT /F2 9.5 Tf 666 247 Td (Free webinars, project) Tj ET
+BT /F2 9.5 Tf 666 234 Td (bounties, career guides.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 215 Td (Feature-flagged: Can be) Tj ET
+BT /F2 9.5 Tf 666 202 Td (turned on/off without) Tj ET
+BT /F2 9.5 Tf 666 189 Td (affecting Core Phase 1.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 14 of 20) Tj ET
+Q
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 2893 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (GOVERNANCE & PLATFORM OPERATIONS) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Super Admin Panel & Dispute Center) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Comprehensive Administrative Control, Content Moderation & Auditing) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Moderation) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (User & Campaign Governance) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Manage all Business, Creator, and Student) Tj ET
+BT /F2 9.5 Tf 76 337 Td (accounts with ban/flag tools.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Campaign moderation queue: Review flagged) Tj ET
+BT /F2 9.5 Tf 76 305 Td (or suspicious listings.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Review moderation queue: Prevent slander or) Tj ET
+BT /F2 9.5 Tf 76 273 Td (retaliatory fake reviews.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Creator badge verification approvals) Tj ET
+BT /F2 9.5 Tf 76 241 Td (\(checking connected socials\).) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Disputes & Logs) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Dispute Resolution & Audit Logs) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Dispute Center: Examine chat history,) Tj ET
+BT /F2 9.5 Tf 521 337 Td (uploaded drafts & contract terms.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Admin resolution actions: Rule in favor of) Tj ET
+BT /F2 9.5 Tf 521 305 Td (creator or refund business.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (Complete Audit Log: Records every) Tj ET
+BT /F2 9.5 Tf 521 273 Td (administrative intervention with timestamp.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (Feature Flag Management: Toggle Student) Tj ET
+BT /F2 9.5 Tf 521 241 Td (Talent Hub visibility.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 15 of 20) Tj ET
+Q
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 5825 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (DATA ARCHITECTURE) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Relational Database Schema & Entities) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (18 Structured Models Ensuring Complete Data Integrity & Relational Soundness) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 270 345 re S
+0.11 0.17 0.30 rg 50 370 270 40 re f
+0.22 0.35 0.65 rg 225 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 230 386 Td (Core Entities) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Core Platform Entities \(1-6\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (User \(id, email,) Tj ET
+BT /F2 9.5 Tf 76 337 Td (password_hash, role, status,) Tj ET
+BT /F2 9.5 Tf 76 324 Td (created_at\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (BusinessProfile \(user_id,) Tj ET
+BT /F2 9.5 Tf 76 292 Td (name, category, location,) Tj ET
+BT /F2 9.5 Tf 76 279 Td (bio, logo\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (CreatorProfile \(user_id,) Tj ET
+BT /F2 9.5 Tf 76 247 Td (niche, location, bio,) Tj ET
+BT /F2 9.5 Tf 76 234 Td (platforms, rates\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 215 Td (Campaign \(id, business_id,) Tj ET
+BT /F2 9.5 Tf 76 202 Td (title, budget, objective,) Tj ET
+BT /F2 9.5 Tf 76 189 Td (status\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 170 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 170 Td (CampaignApplication \(id,) Tj ET
+BT /F2 9.5 Tf 76 157 Td (campaign_id, creator_id,) Tj ET
+BT /F2 9.5 Tf 76 144 Td (bid_price, status\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 125 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 125 Td (Collaboration \(id,) Tj ET
+BT /F2 9.5 Tf 76 112 Td (campaign_id, business_id,) Tj ET
+BT /F2 9.5 Tf 76 99 Td (creator_id, terms, status\)) Tj ET
+0.08 0.12 0.22 rg 345 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 345 65 270 345 re S
+0.11 0.17 0.30 rg 345 370 270 40 re f
+0.22 0.35 0.65 rg 520 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 525 386 Td (Attribution & Ops) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 359 385 Td (Workflow & Tracking Entities \(7-12\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 350 Td (DeliverableItem \(collab_id,) Tj ET
+BT /F2 9.5 Tf 371 337 Td (title, type, status,) Tj ET
+BT /F2 9.5 Tf 371 324 Td (draft_url\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 305 Td (ChatMessage \(collab_id,) Tj ET
+BT /F2 9.5 Tf 371 292 Td (sender_id, receiver_id,) Tj ET
+BT /F2 9.5 Tf 371 279 Td (message, read\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 260 Td (Notification \(user_id,) Tj ET
+BT /F2 9.5 Tf 371 247 Td (title, message, link, read,) Tj ET
+BT /F2 9.5 Tf 371 234 Td (created_at\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 215 Td (TrackingCode \(campaign_id,) Tj ET
+BT /F2 9.5 Tf 371 202 Td (creator_id, qr_code,) Tj ET
+BT /F2 9.5 Tf 371 189 Td (coupon_code\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 170 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 170 Td (TrackingEvent \(code_id,) Tj ET
+BT /F2 9.5 Tf 371 157 Td (event_type) Tj ET
+BT /F2 9.5 Tf 371 144 Td ([SCAN/COUPON/LEAD],) Tj ET
+BT /F2 9.5 Tf 371 131 Td (timestamp\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 112 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 112 Td (DealPayment \(collab_id,) Tj ET
+BT /F2 9.5 Tf 371 99 Td (amount, status, tx_ref,) Tj ET
+BT /F2 9.5 Tf 371 86 Td (paid_at\)) Tj ET
+0.08 0.12 0.22 rg 640 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 640 65 270 345 re S
+0.11 0.17 0.30 rg 640 370 270 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Trust & Expansion) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 654 385 Td (Trust, Student & Audit Entities \(13-18\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 350 Td (Review \(collab_id,) Tj ET
+BT /F2 9.5 Tf 666 337 Td (author_id, target_id,) Tj ET
+BT /F2 9.5 Tf 666 324 Td (rating, comment\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 305 Td (VerificationRequest) Tj ET
+BT /F2 9.5 Tf 666 292 Td (\(user_id, document_url,) Tj ET
+BT /F2 9.5 Tf 666 279 Td (status, reviewed_by\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 260 Td (StudentProfile \(user_id,) Tj ET
+BT /F2 9.5 Tf 666 247 Td (university, skills,) Tj ET
+BT /F2 9.5 Tf 666 234 Td (portfolio_links\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 215 Td (StudentCertificate) Tj ET
+BT /F2 9.5 Tf 666 202 Td (\(student_id, project_title,) Tj ET
+BT /F2 9.5 Tf 666 189 Td (client_id, cert_id\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 170 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 170 Td (DisputeTicket \(collab_id,) Tj ET
+BT /F2 9.5 Tf 666 157 Td (raised_by, reason, status,) Tj ET
+BT /F2 9.5 Tf 666 144 Td (resolution\)) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 125 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 125 Td (AuditLog \(admin_id, action,) Tj ET
+BT /F2 9.5 Tf 666 112 Td (target_entity, details,) Tj ET
+BT /F2 9.5 Tf 666 99 Td (created_at\)) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 16 of 20) Tj ET
+Q
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Length 4285 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (NON-FUNCTIONAL SPECIFICATIONS) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Security, Performance & Reliability) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Enterprise Standards Baked into Platform Foundations) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 270 345 re S
+0.11 0.17 0.30 rg 50 370 270 40 re f
+0.22 0.35 0.65 rg 225 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 230 386 Td (Security) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Rigorous Security Standards) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Bcrypt password hashing) Tj ET
+BT /F2 9.5 Tf 76 337 Td (\(salt rounds 10+\) & CSRF) Tj ET
+BT /F2 9.5 Tf 76 324 Td (protection.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (Input sanitization) Tj ET
+BT /F2 9.5 Tf 76 292 Td (preventing SQL injection &) Tj ET
+BT /F2 9.5 Tf 76 279 Td (XSS scripting.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (Rate limiting on auth &) Tj ET
+BT /F2 9.5 Tf 76 247 Td (sensitive API routes \(10) Tj ET
+BT /F2 9.5 Tf 76 234 Td (req/min for auth\).) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 215 Td (Protected file upload) Tj ET
+BT /F2 9.5 Tf 76 202 Td (pipelines with mime-type) Tj ET
+BT /F2 9.5 Tf 76 189 Td (checking.) Tj ET
+0.08 0.12 0.22 rg 345 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 345 65 270 345 re S
+0.11 0.17 0.30 rg 345 370 270 40 re f
+0.22 0.35 0.65 rg 520 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 525 386 Td (Performance) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 359 385 Td (High Performance Benchmarks) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 350 Td (Lighthouse performance) Tj ET
+BT /F2 9.5 Tf 371 337 Td (target > 90 across mobile &) Tj ET
+BT /F2 9.5 Tf 371 324 Td (desktop.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 305 Td (Pagination on all) Tj ET
+BT /F2 9.5 Tf 371 292 Td (marketplace grids & database) Tj ET
+BT /F2 9.5 Tf 371 279 Td (queries.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 260 Td (Debounced search inputs &) Tj ET
+BT /F2 9.5 Tf 371 247 Td (cached public creator) Tj ET
+BT /F2 9.5 Tf 371 234 Td (directories.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 359 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 371 215 Td (Lazy loading images,) Tj ET
+BT /F2 9.5 Tf 371 202 Td (modular code-splitting &) Tj ET
+BT /F2 9.5 Tf 371 189 Td (optimistic UI updates.) Tj ET
+0.08 0.12 0.22 rg 640 65 270 345 re f
+0.18 0.25 0.40 RG 1 w 640 65 270 345 re S
+0.11 0.17 0.30 rg 640 370 270 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Reliability) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 654 385 Td (Reliability & Resilience) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 350 Td (Comprehensive Error) Tj ET
+BT /F2 9.5 Tf 666 337 Td (Boundaries preventing) Tj ET
+BT /F2 9.5 Tf 666 324 Td (cascade page crashes.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 305 Td (Structured empty states,) Tj ET
+BT /F2 9.5 Tf 666 292 Td (loading skeletons &) Tj ET
+BT /F2 9.5 Tf 666 279 Td (informative tooltips.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 260 Td (Fallback template) Tj ET
+BT /F2 9.5 Tf 666 247 Td (algorithms for AI brief) Tj ET
+BT /F2 9.5 Tf 666 234 Td (generator if offline.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 654 215 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 666 215 Td (Zero broken buttons or) Tj ET
+BT /F2 9.5 Tf 666 202 Td (placeholder non-functional) Tj ET
+BT /F2 9.5 Tf 666 189 Td (links.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 17 of 20) Tj ET
+Q
+endstream
+endobj
+36 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 35 0 R >>
+endobj
+37 0 obj
+<< /Length 3703 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (USER JOURNEYS) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (End-to-End User Experience Flows) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Step-by-Step Experience Mapping for Both Core Personas) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Business Journey) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Business Persona Journey) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (1. Onboarding: Register business, define) Tj ET
+BT /F2 9.5 Tf 76 337 Td (location & marketing goals.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (2. Discovery: Search creators by locality &) Tj ET
+BT /F2 9.5 Tf 76 305 Td (compare opportunity scores.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (3. Campaign Launch: Post campaign budget &) Tj ET
+BT /F2 9.5 Tf 76 273 Td (deliverables in marketplace.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (4. Collaboration: Accept bids, approve) Tj ET
+BT /F2 9.5 Tf 76 241 Td (draft content & monitor deadlines.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 222 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 222 Td (5. Attribution: Track in-store QR scans &) Tj ET
+BT /F2 9.5 Tf 76 209 Td (coupon redemptions in real time.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 190 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 190 Td (6. Closeout: Release payment, generate) Tj ET
+BT /F2 9.5 Tf 76 177 Td (invoice & write mutual review.) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Creator Journey) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Creator Persona Journey) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (1. Onboarding: Build profile, link social) Tj ET
+BT /F2 9.5 Tf 521 337 Td (handles & showcase top reels.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (2. Exploration: Filter campaigns matching) Tj ET
+BT /F2 9.5 Tf 521 305 Td (niche & hyperlocal radius.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (3. Bidding: Apply with custom creative) Tj ET
+BT /F2 9.5 Tf 521 273 Td (proposal & deliverable fees.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (4. Production: Receive agreement, create) Tj ET
+BT /F2 9.5 Tf 521 241 Td (drafts & upload to Collab Hub.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 222 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 222 Td (5. Revision: Address brand feedback within) Tj ET
+BT /F2 9.5 Tf 521 209 Td (agreed 2-revision limit.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 190 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 190 Td (6. Payout: Final content approved, track) Tj ET
+BT /F2 9.5 Tf 521 177 Td (deal payout & receive 5-star review.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 18 of 20) Tj ET
+Q
+endstream
+endobj
+38 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 37 0 R >>
+endobj
+39 0 obj
+<< /Length 4848 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (DELIVERY ROADMAP) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Iterative Development & Build Roadmap) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Systematic Implementation Steps Towards Complete Working Product) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 200 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 200 345 re S
+0.11 0.17 0.30 rg 50 370 200 40 re f
+0.22 0.35 0.65 rg 155 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 160 386 Td (Sprint 1) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Milestone 1: Foundations & Auth) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Next.js + Tailwind) Tj ET
+BT /F2 9.5 Tf 76 337 Td (project setup, design) Tj ET
+BT /F2 9.5 Tf 76 324 Td (system & typography.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 305 Td (Database schema setup) Tj ET
+BT /F2 9.5 Tf 76 292 Td (with Prisma ORM &) Tj ET
+BT /F2 9.5 Tf 76 279 Td (migrations.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 260 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 260 Td (Secure dual-role) Tj ET
+BT /F2 9.5 Tf 76 247 Td (authentication &) Tj ET
+BT /F2 9.5 Tf 76 234 Td (session state) Tj ET
+BT /F2 9.5 Tf 76 221 Td (management.) Tj ET
+0.08 0.12 0.22 rg 270 65 200 345 re f
+0.18 0.25 0.40 RG 1 w 270 65 200 345 re S
+0.11 0.17 0.30 rg 270 370 200 40 re f
+0.22 0.35 0.65 rg 375 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 380 386 Td (Sprint 2) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 284 385 Td (Milestone 2: Marketplace & Match) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 284 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 296 350 Td (Business & Creator) Tj ET
+BT /F2 9.5 Tf 296 337 Td (profile pages with) Tj ET
+BT /F2 9.5 Tf 296 324 Td (rich media kit) Tj ET
+BT /F2 9.5 Tf 296 311 Td (display.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 284 292 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 296 292 Td (Smart Creator) Tj ET
+BT /F2 9.5 Tf 296 279 Td (Discovery marketplace) Tj ET
+BT /F2 9.5 Tf 296 266 Td (with filters & compare) Tj ET
+BT /F2 9.5 Tf 296 253 Td (tray.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 284 234 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 296 234 Td (Hyperlocal matching) Tj ET
+BT /F2 9.5 Tf 296 221 Td (algorithm &) Tj ET
+BT /F2 9.5 Tf 296 208 Td (budget-to-campaign) Tj ET
+BT /F2 9.5 Tf 296 195 Td (planner.) Tj ET
+0.08 0.12 0.22 rg 490 65 200 345 re f
+0.18 0.25 0.40 RG 1 w 490 65 200 345 re S
+0.11 0.17 0.30 rg 490 370 200 40 re f
+0.22 0.35 0.65 rg 595 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 600 386 Td (Sprint 3) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 504 385 Td (Milestone 3: Campaigns & Collab) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 504 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 516 350 Td (Campaign creation,) Tj ET
+BT /F2 9.5 Tf 516 337 Td (application & reverse) Tj ET
+BT /F2 9.5 Tf 516 324 Td (bidding workflows.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 504 305 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 516 305 Td (Collaboration Hub) Tj ET
+BT /F2 9.5 Tf 516 292 Td (with deliverable) Tj ET
+BT /F2 9.5 Tf 516 279 Td (checklists & draft) Tj ET
+BT /F2 9.5 Tf 516 266 Td (submissions.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 504 247 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 516 247 Td (Messaging system,) Tj ET
+BT /F2 9.5 Tf 516 234 Td (notifications &) Tj ET
+BT /F2 9.5 Tf 516 221 Td (automated deadline) Tj ET
+BT /F2 9.5 Tf 516 208 Td (alerts.) Tj ET
+0.08 0.12 0.22 rg 710 65 200 345 re f
+0.18 0.25 0.40 RG 1 w 710 65 200 345 re S
+0.11 0.17 0.30 rg 710 370 200 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Sprint 4) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 724 385 Td (Milestone 4: Tracking & Final Polish) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 724 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 736 350 Td (QR & coupon) Tj ET
+BT /F2 9.5 Tf 736 337 Td (conversion engine +) Tj ET
+BT /F2 9.5 Tf 736 324 Td (real-time ROI) Tj ET
+BT /F2 9.5 Tf 736 311 Td (analytics dashboard.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 724 292 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 736 292 Td (Mutual review system,) Tj ET
+BT /F2 9.5 Tf 736 279 Td (payment ledger & Super) Tj ET
+BT /F2 9.5 Tf 736 266 Td (Admin panel.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 724 247 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 736 247 Td (Student Talent Hub) Tj ET
+BT /F2 9.5 Tf 736 234 Td (modular shell &) Tj ET
+BT /F2 9.5 Tf 736 221 Td (complete end-to-end) Tj ET
+BT /F2 9.5 Tf 736 208 Td (verification.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 19 of 20) Tj ET
+Q
+endstream
+endobj
+40 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 39 0 R >>
+endobj
+41 0 obj
+<< /Length 2893 >>
+stream
+q
+0.043 0.067 0.125 rg 0 0 960 540 re f
+0.388 0.400 0.945 rg 0 534 960 6 re f
+0.15 0.20 0.35 rg 50 488 280 22 re f
+0.50 0.65 1.00 rg
+BT /F1 9 Tf 62 494 Td (FINAL VERIFICATION & SIGN-OFF) Tj ET
+0.98 0.98 1.00 rg
+BT /F1 20 Tf 50 458 Td (Cross-Check Sign-Off & Green Light) Tj ET
+0.60 0.68 0.82 rg
+BT /F2 11 Tf 50 440 Td (Review Confirmation Before Proceeding to Complete Website Code Construction) Tj ET
+0.15 0.20 0.30 RG 1 w 50 428 m 910 428 l S
+0.08 0.12 0.22 rg 50 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 50 65 415 345 re S
+0.11 0.17 0.30 rg 50 370 415 40 re f
+0.22 0.35 0.65 rg 370 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 375 386 Td (Review Points) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 64 385 Td (Module Verification Checklist) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 350 Td (Are all 20 Phase-1 core marketplace modules) Tj ET
+BT /F2 9.5 Tf 76 337 Td (aligned with your vision?) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 318 Td (Is the dual-role authentication & access) Tj ET
+BT /F2 9.5 Tf 76 305 Td (control matrix approved?) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 286 Td (Are the QR & coupon conversion tracking) Tj ET
+BT /F2 9.5 Tf 76 273 Td (requirements complete?) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 64 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 76 254 Td (Is the modular Student Talent Hub) Tj ET
+BT /F2 9.5 Tf 76 241 Td (architecture accepted for future expansion?) Tj ET
+0.08 0.12 0.22 rg 495 65 415 345 re f
+0.18 0.25 0.40 RG 1 w 495 65 415 345 re S
+0.11 0.17 0.30 rg 495 370 415 40 re f
+0.22 0.35 0.65 rg 815 380 85 20 re f
+0.85 0.92 1.00 rg
+BT /F1 8 Tf 820 386 Td (Action Plan) Tj ET
+1 1 1 rg
+BT /F1 12 Tf 509 385 Td (Next Step: Build Execution) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 350 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 350 Td (Upon your confirmation, the entire working) Tj ET
+BT /F2 9.5 Tf 521 337 Td (application will be created.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 318 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 318 Td (Every component will be fully functional) Tj ET
+BT /F2 9.5 Tf 521 305 Td (with real persisted data.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 286 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 286 Td (A responsive, live local dev server will be) Tj ET
+BT /F2 9.5 Tf 521 273 Td (started for interactive testing.) Tj ET
+0.388 0.500 0.945 rg
+BT /F1 10 Tf 509 254 Td (>) Tj ET
+0.82 0.88 0.95 rg
+BT /F2 9.5 Tf 521 254 Td (No mockup buttons, no fake analytics, and) Tj ET
+BT /F2 9.5 Tf 521 241 Td (zero placeholder stubs.) Tj ET
+0.15 0.20 0.30 RG 1 w 50 50 m 910 50 l S
+0.45 0.55 0.70 rg
+BT /F2 8.5 Tf 50 35 Td (CampusCrew Architecture & Specification Presentation | Confidential & Proprietary) Tj ET
+BT /F1 8.5 Tf 840 35 Td (Slide 20 of 20) Tj ET
+Q
+endstream
+endobj
+42 0 obj
+<< /Type /Page /Parent 43 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 41 0 R >>
+endobj
+43 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R] /Count 20 >>
+endobj
+44 0 obj
+<< /Type /Catalog /Pages 43 0 R >>
+endobj
+xref
+0 45
+0000000000 65535 f 
+0000000009 00000 n 
+0000000084 00000 n 
+0000000154 00000 n 
+0000003090 00000 n 
+0000003227 00000 n 
+0000007614 00000 n 
+0000007751 00000 n 
+0000012115 00000 n 
+0000012252 00000 n 
+0000015156 00000 n 
+0000015294 00000 n 
+0000018221 00000 n 
+0000018360 00000 n 
+0000021544 00000 n 
+0000021683 00000 n 
+0000024627 00000 n 
+0000024766 00000 n 
+0000027691 00000 n 
+0000027830 00000 n 
+0000030733 00000 n 
+0000030872 00000 n 
+0000033792 00000 n 
+0000033931 00000 n 
+0000036865 00000 n 
+0000037004 00000 n 
+0000039956 00000 n 
+0000040095 00000 n 
+0000043024 00000 n 
+0000043163 00000 n 
+0000047637 00000 n 
+0000047776 00000 n 
+0000050722 00000 n 
+0000050861 00000 n 
+0000056739 00000 n 
+0000056878 00000 n 
+0000061216 00000 n 
+0000061355 00000 n 
+0000065111 00000 n 
+0000065250 00000 n 
+0000070151 00000 n 
+0000070290 00000 n 
+0000073236 00000 n 
+0000073375 00000 n 
+0000073565 00000 n 
+trailer
+<< /Size 45 /Root 44 0 R >>
+startxref
+73616
+%%EOF

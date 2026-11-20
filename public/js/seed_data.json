@@ -1,0 +1,872 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@campuscrew.com",
+      "password_hash": "4e2ee8a34b62e89e36def8fb526821177c7e5bdf65df8fb3e83f6567643b9786",
+      "salt": "caad5b69de7048ac0ea027560b4a4929",
+      "role": "admin",
+      "full_name": "CampusCrew Governance",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 2,
+      "email": "urbanroast@local.com",
+      "password_hash": "38bb715ae9c6c93dbe59236672a77a25b297fd0d3c49bdc9f2532bf7ed99db65",
+      "salt": "cad69a53b4aebcbebf731557f003f2b0",
+      "role": "business",
+      "full_name": "Urban Roast Cafe & Roastery",
+      "avatar_url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "email": "apex@fitness.com",
+      "password_hash": "0348d406789ca8b049f88174fa60446c9c81b62c0a163fdaea3d16c0eef7946a",
+      "salt": "41beddd82204e142d085d9315dec5792",
+      "role": "business",
+      "full_name": "Apex Strength & Athletic Club",
+      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 4,
+      "email": "hello@lunabotanicals.com",
+      "password_hash": "bc55c3ac7f9a5c443ab9f283e94bb42d62c6fa5b6390505b66f645e65b968d39",
+      "salt": "3fb6a76cdc1b904b7595ecc10c08c8da",
+      "role": "business",
+      "full_name": "Luna Botanicals Skincare",
+      "avatar_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 5,
+      "email": "threads@neonvintage.com",
+      "password_hash": "eccece502db5b33822499977bda2b8910206000649fddf64dbf054c2698d3113",
+      "salt": "9bd0f99ef190b1d171cde1014e4ec2c3",
+      "role": "business",
+      "full_name": "Neon Thread Vintage Boutique",
+      "avatar_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 6,
+      "email": "sarah@creator.com",
+      "password_hash": "e0f064a64f827bf2c4bab0393ca07ae9b07aea035f8184f04337ddd896708872",
+      "salt": "d8e07a13b69fc90fd29550109ad9238b",
+      "role": "creator",
+      "full_name": "Sarah Chen",
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 7,
+      "email": "marcus@creator.com",
+      "password_hash": "8a9aedc347a342fa9ebdb10bf1cc6968cab246bd8b2676ba7c43e97d174d7006",
+      "salt": "31c3aa6ffe4bd26d63cd64f0a5154179",
+      "role": "creator",
+      "full_name": "Marcus Vance",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 8,
+      "email": "elena@creator.com",
+      "password_hash": "57fd663cd1f58e768dc87c05f303565fc342fa36d3eb2c1bcc3d79719bcdb11d",
+      "salt": "570cf9990cbbad845e99365258ab98b8",
+      "role": "creator",
+      "full_name": "Elena Rodriguez",
+      "avatar_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 9,
+      "email": "devin@creator.com",
+      "password_hash": "7c8a8edafd411ef5db648dd846ca299cbcbfc4d5cdf04ea0415f396b56e668f3",
+      "salt": "89d7b8c9b63ccea53cd48629257ed9d7",
+      "role": "creator",
+      "full_name": "Devin Brooks",
+      "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 10,
+      "email": "chloe@creator.com",
+      "password_hash": "3d767ecf5a753fc6a7f343bd8f259c0a173f264ac01d3772255bc2c7e332e309",
+      "salt": "3729d2d4e1781f0bb684fcaccf8b83ee",
+      "role": "creator",
+      "full_name": "Chloe Miller",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 11,
+      "email": "alex@student.com",
+      "password_hash": "baaa7e3c837eb21deede6b3f19d4ea1dc1f9d53b2fa266b3162d607c876a820c",
+      "salt": "cd4c35a7131d67b440606efec3a4b33d",
+      "role": "student",
+      "full_name": "Alex Rivera",
+      "avatar_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150",
+      "is_verified": 1,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 12,
+      "email": "natiruchi@local.com",
+      "password_hash": "50123681bf38ed29745685e53b19cfc6df3b39810875559a483a239b5a0266c3",
+      "salt": "578c254e4479642167787c42deadd5cd",
+      "role": "business",
+      "full_name": "SNR Nati Ruchi Family Restaurant",
+      "avatar_url": "images/real/nati_ruchi_storefront.jpg",
+      "is_verified": 1,
+      "created_at": "2026-11-13T13:01:23.085051"
+    },
+    {
+      "id": 13,
+      "email": "aditya@creator.com",
+      "password_hash": "05d82001bc4a13b9600f7ec4268a835b928bc04e267318d496d64fb21d90fc30",
+      "salt": "9067bc4ea101ab3833760c9e5883e5db",
+      "role": "creator",
+      "full_name": "Aditya Kumar",
+      "avatar_url": "images/real/counter_qr_campaign_review.jpg",
+      "is_verified": 1,
+      "created_at": "2026-11-13T13:01:23.085051"
+    }
+  ],
+  "business_profiles": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "company_name": "Urban Roast Cafe & Roastery",
+      "category": "Food & Beverage",
+      "location": "North Campus Main Street",
+      "city": "Austin",
+      "lat": 30.2849,
+      "lng": -97.7341,
+      "description": "Artisanal coffee house, matcha bar and study sanctuary catering to university students and creative remote workers.",
+      "logo_url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=150",
+      "website": "https://urbanroastcafe&roastery.com",
+      "phone": "+1-512-555-0199",
+      "budget_range": "$500 - $2,000",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "company_name": "Apex Strength & Athletic Club",
+      "category": "Fitness & Health",
+      "location": "West Campus Boulevard",
+      "city": "Austin",
+      "lat": 30.2889,
+      "lng": -97.742,
+      "description": "24/7 modern strength training facility, HIIT studios, and student fitness wellness challenges.",
+      "logo_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150",
+      "website": "https://apexstrength&athleticclub.com",
+      "phone": "+1-512-555-0199",
+      "budget_range": "$1,000 - $3,500",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "company_name": "Luna Botanicals Skincare",
+      "category": "Beauty & Wellness",
+      "location": "SoCo District Plaza",
+      "city": "Austin",
+      "lat": 30.25,
+      "lng": -97.749,
+      "description": "Eco-friendly, cruelty-free organic skincare crafted for young professionals and Gen-Z skin wellness.",
+      "logo_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=150",
+      "website": "https://lunabotanicalsskincare.com",
+      "phone": "+1-512-555-0199",
+      "budget_range": "$800 - $2,500",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 4,
+      "user_id": 5,
+      "company_name": "Neon Thread Vintage Boutique",
+      "category": "Fashion & Retail",
+      "location": "East Campus Arts Corner",
+      "city": "Austin",
+      "lat": 30.272,
+      "lng": -97.725,
+      "description": "Curated streetwear, 90s vintage finds, and sustainable upcycled college apparel.",
+      "logo_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150",
+      "website": "https://neonthreadvintageboutique.com",
+      "phone": "+1-512-555-0199",
+      "budget_range": "$300 - $1,200",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 5,
+      "user_id": 12,
+      "company_name": "SNR Nati Ruchi Family Restaurant",
+      "category": "Food & Beverage",
+      "location": "Opposite Campus Hub, College Main Rd",
+      "city": "Bangalore",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "description": "Authentic Nati-style dining and biryani house popular among college students, hostellers and campus visitors. Partnered with CampusCrew creators for in-store counter QR discount campaigns.",
+      "logo_url": "images/real/nati_ruchi_storefront.jpg",
+      "website": "https://natiruchi.campuscrew.me",
+      "phone": "+91-98450-12890",
+      "budget_range": "$400 - $1,500",
+      "created_at": "2026-11-13T13:01:23.085051"
+    }
+  ],
+  "creator_profiles": [
+    {
+      "id": 1,
+      "user_id": 6,
+      "handle": "@sarah_atx_bites",
+      "niche": "Food & Beverage",
+      "location": "North Campus",
+      "city": "Austin",
+      "lat": 30.286,
+      "lng": -97.733,
+      "bio": "UT Senior & foodie creator highlighting hidden gem cafes, budget study snacks, and campus lunch spots.",
+      "portfolio_url": "https://portfolio.campuscrew.me/sarah_atx_bites",
+      "instagram_handle": "@sarah_atx_bites",
+      "youtube_handle": "sarah_atx_bites_yt",
+      "follower_count": 24500,
+      "avg_engagement_rate": 6.8,
+      "base_rate": 250.0,
+      "audience_age_group": "18-24 (78%)",
+      "is_audience_verified": 1,
+      "reliability_score": 98.5,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 2,
+      "user_id": 7,
+      "handle": "@marcus_lifts",
+      "niche": "Fitness & Health",
+      "location": "West Campus",
+      "city": "Austin",
+      "lat": 30.2895,
+      "lng": -97.741,
+      "bio": "Collegiate track athlete sharing student workout routines, high-protein meal preps, and gym reviews.",
+      "portfolio_url": "https://portfolio.campuscrew.me/marcus_lifts",
+      "instagram_handle": "@marcus_lifts",
+      "youtube_handle": "marcus_lifts_yt",
+      "follower_count": 18200,
+      "avg_engagement_rate": 7.4,
+      "base_rate": 200.0,
+      "audience_age_group": "18-24 (82%)",
+      "is_audience_verified": 1,
+      "reliability_score": 96.0,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "user_id": 8,
+      "handle": "@elena_glow",
+      "niche": "Beauty & Wellness",
+      "location": "Downtown / SoCo",
+      "city": "Austin",
+      "lat": 30.26,
+      "lng": -97.745,
+      "bio": "Dermatology student & clean skincare advocate reviewing local spa treatments and non-toxic routines.",
+      "portfolio_url": "https://portfolio.campuscrew.me/elena_glow",
+      "instagram_handle": "@elena_glow",
+      "youtube_handle": "elena_glow_yt",
+      "follower_count": 31000,
+      "avg_engagement_rate": 5.9,
+      "base_rate": 320.0,
+      "audience_age_group": "18-30 (72%)",
+      "is_audience_verified": 1,
+      "reliability_score": 99.0,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 4,
+      "user_id": 9,
+      "handle": "@devin_fits",
+      "niche": "Fashion & Retail",
+      "location": "East Campus",
+      "city": "Austin",
+      "lat": 30.274,
+      "lng": -97.723,
+      "bio": "Thrifter, streetwear styler and campus fashion week director. Helping local vintage shops sell out drops.",
+      "portfolio_url": "https://portfolio.campuscrew.me/devin_fits",
+      "instagram_handle": "@devin_fits",
+      "youtube_handle": "devin_fits_yt",
+      "follower_count": 14800,
+      "avg_engagement_rate": 8.1,
+      "base_rate": 180.0,
+      "audience_age_group": "18-24 (86%)",
+      "is_audience_verified": 0,
+      "reliability_score": 94.0,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 5,
+      "user_id": 10,
+      "handle": "@chloe_campus_life",
+      "niche": "Lifestyle & Events",
+      "location": "Campus Center",
+      "city": "Austin",
+      "lat": 30.2855,
+      "lng": -97.737,
+      "bio": "Daily college vlogger, student council social chair, and campus guide. Event promos and hangout spots.",
+      "portfolio_url": "https://portfolio.campuscrew.me/chloe_campus_life",
+      "instagram_handle": "@chloe_campus_life",
+      "youtube_handle": "chloe_campus_life_yt",
+      "follower_count": 42000,
+      "avg_engagement_rate": 6.2,
+      "base_rate": 400.0,
+      "audience_age_group": "18-25 (88%)",
+      "is_audience_verified": 1,
+      "reliability_score": 97.5,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 6,
+      "user_id": 13,
+      "handle": "@aditya_campus_bites",
+      "niche": "Food & Beverage",
+      "location": "College Campus Road",
+      "city": "Bangalore",
+      "lat": 12.972,
+      "lng": 77.595,
+      "bio": "Campus Ambassador & Food Creator connecting students with genuine local dining spots. Proven track record with in-store counter QR promotions.",
+      "portfolio_url": "https://portfolio.campuscrew.me/aditya",
+      "instagram_handle": "@aditya_campus_bites",
+      "youtube_handle": "aditya_campus_yt",
+      "follower_count": 28500,
+      "avg_engagement_rate": 7.8,
+      "base_rate": 280.0,
+      "audience_age_group": "18-24 (84%)",
+      "is_audience_verified": 1,
+      "reliability_score": 99.0,
+      "created_at": "2026-11-13T13:01:23.085051"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": 1,
+      "business_id": 2,
+      "title": "Fall Nitro Matcha Launch & Study Night Promo",
+      "description": "We are introducing our seasonal Iced Lavender Oat Matcha and 24-hr study nights for finals week. Looking for 2 local food/campus creators to visit in-person, film an aesthetic reel tasting the drink, and share an exclusive 15% student coupon code with their followers.",
+      "category": "Food & Beverage",
+      "objective": "Footfall & Coupon Redemptions",
+      "budget": 600.0,
+      "collaboration_type": "paid",
+      "target_location": "North Campus, Austin",
+      "required_niche": "Food & Beverage",
+      "deliverables": "1 Instagram Reel (30-45s) + 2 IG Stories with clickable QR link + In-store check-in",
+      "deadline": "2026-12-04",
+      "application_deadline": "2026-11-25",
+      "status": "in_progress",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 2,
+      "business_id": 3,
+      "title": "Semester Fitness Reboot \u2013 3-Day Free Pass Challenge",
+      "description": "Boost student memberships by showcasing our state-of-the-art turf zone and group classes. Creators will receive a complimentary 6-month VIP membership and $450 payment per creator.",
+      "category": "Fitness & Health",
+      "objective": "New Gym Memberships & QR Scans",
+      "budget": 900.0,
+      "collaboration_type": "paid",
+      "target_location": "West Campus, Austin",
+      "required_niche": "Fitness & Health",
+      "deliverables": "1 High-Energy Workout Reel + 3 Story frames highlighting student discount + Bio link QR code",
+      "deadline": "2026-12-10",
+      "application_deadline": "2026-11-27",
+      "status": "published",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "business_id": 4,
+      "title": "Clean Skin Campus Kit Unboxing & Routine",
+      "description": "Gifting our bestselling Acne Defense Duo. Create a real 'Get Ready With Me' (GRWM) morning routine showing application and texture. Looking for aesthetic skin creators.",
+      "category": "Beauty & Wellness",
+      "objective": "Online Orders & Brand Awareness",
+      "budget": 450.0,
+      "collaboration_type": "hybrid",
+      "target_location": "SoCo & University Campus",
+      "required_niche": "Beauty & Wellness",
+      "deliverables": "1 GRWM Reel + 1 Product Carousel + Discount code promotion",
+      "deadline": "2026-12-08",
+      "application_deadline": "2026-11-26",
+      "status": "applications_open",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 4,
+      "business_id": 5,
+      "title": "Vintage Drop Saturday: First 50 Shoppers Event",
+      "description": "Promote our monthly vintage clothing thrift drop this Saturday morning. Need 2 creators to try on outfits and announce the in-store morning giveaway.",
+      "category": "Fashion & Retail",
+      "objective": "Event Attendance & Footfall",
+      "budget": 350.0,
+      "collaboration_type": "paid",
+      "target_location": "East Campus Arts Corner",
+      "required_niche": "Fashion & Retail",
+      "deliverables": "2 Try-On Haul Stories + 1 Event Teaser Reel",
+      "deadline": "2026-11-28",
+      "application_deadline": "2026-11-22",
+      "status": "published",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 5,
+      "business_id": 12,
+      "title": "SNR Nati Ruchi - Weekend Biryani & Student Thali Promotion",
+      "description": "Looking for local campus food creators to visit in-person, film an authentic tasting reel of our signature Nati chicken biryani and mutton thali, and set up our dedicated student 15% discount counter QR standee at the reception.",
+      "category": "Food & Beverage",
+      "objective": "Footfall & QR Redemptions",
+      "budget": 500.0,
+      "collaboration_type": "paid",
+      "target_location": "Campus Hub, Bangalore",
+      "required_niche": "Food & Beverage",
+      "deliverables": "1 In-Store Tasting Reel (30-45s) + 2 Stories with Counter QR Standee Shoutout + Counter Placement",
+      "deadline": "2026-12-05",
+      "application_deadline": "2026-11-28",
+      "status": "in_progress",
+      "created_at": "2026-11-13T13:01:23.085051"
+    }
+  ],
+  "campaign_applications": [
+    {
+      "id": 1,
+      "campaign_id": 1,
+      "creator_id": 6,
+      "proposed_fee": 300.0,
+      "proposed_deliverables": "1 Tasting Reel + 2 Stories + QR Table Card Shoutout",
+      "creative_pitch": "I have a highly active student audience that studies in North Campus. I can feature your new Lavender Matcha as my 'study fuel of the week'!",
+      "estimated_days": 5,
+      "status": "accepted",
+      "score": 96.5,
+      "score_breakdown": "{\"location_match\": 100, \"niche_match\": 100, \"budget_match\": 95, \"reliability\": 98, \"engagement_quality\": 92}",
+      "created_at": "2026-11-13T08:24:18.683588"
+    }
+  ],
+  "collaborations": [
+    {
+      "id": 1,
+      "campaign_id": 1,
+      "business_id": 2,
+      "creator_id": 6,
+      "agreed_fee": 300.0,
+      "terms_agreement": "CampusCrew Standard Agreement: 1 30-45s Reel + 2 Stories. Up to 2 revisions included. Payment released within 48h of final approval. No unapproved music.",
+      "max_revisions": 2,
+      "used_revisions": 0,
+      "deadline": "2026-11-27",
+      "status": "in_progress",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 2,
+      "campaign_id": 3,
+      "business_id": 4,
+      "creator_id": 8,
+      "agreed_fee": 320.0,
+      "terms_agreement": "Standard Terms Completed",
+      "max_revisions": 2,
+      "used_revisions": 1,
+      "deadline": "2026-11-13T08:24:18.683588",
+      "status": "completed",
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "campaign_id": 5,
+      "business_id": 12,
+      "creator_id": 13,
+      "agreed_fee": 350.0,
+      "terms_agreement": "CampusCrew Verified Agreement: 1 30-45s In-Store Reel + 2 Stories + Counter QR standee review. Max 2 revisions. In-store counter verification agreed.",
+      "max_revisions": 2,
+      "used_revisions": 0,
+      "deadline": "2026-11-26",
+      "status": "in_progress",
+      "created_at": "2026-11-19T13:01:23.085047"
+    }
+  ],
+  "deliverables": [
+    {
+      "id": 1,
+      "collaboration_id": 1,
+      "title": "Draft Reel: Lavender Matcha Tasting & Study Vibe",
+      "deliverable_type": "Instagram Reel",
+      "status": "submitted",
+      "submission_url": "https://instagram.com/p/sample_reel_draft_preview",
+      "submission_notes": "Hey team! Here is the draft video cut with trending audio. Let me know if the color grading looks great!",
+      "revision_notes": null,
+      "submitted_at": "2026-11-19T08:24:18.683585",
+      "approved_at": null
+    },
+    {
+      "id": 2,
+      "collaboration_id": 1,
+      "title": "2 Instagram Story Slides with QR Link",
+      "deliverable_type": "Instagram Stories",
+      "status": "pending",
+      "submission_url": null,
+      "submission_notes": null,
+      "revision_notes": null,
+      "submitted_at": null,
+      "approved_at": null
+    },
+    {
+      "id": 3,
+      "collaboration_id": 3,
+      "title": "In-Store Counter Review & QR Standee Setup",
+      "deliverable_type": "Instagram Reel & QR Placement",
+      "status": "submitted",
+      "submission_url": "images/real/counter_qr_campaign_review.jpg",
+      "submission_notes": "Visited SNR Nati Ruchi, met the owner at the billing counter, set up the orange QR standee, and recorded reel with customer reactions.",
+      "revision_notes": null,
+      "submitted_at": "2026-11-19T13:01:23.085047",
+      "approved_at": null
+    },
+    {
+      "id": 4,
+      "collaboration_id": 3,
+      "title": "Storefront Handshake & Announcement Stories",
+      "deliverable_type": "Instagram Stories",
+      "status": "approved",
+      "submission_url": "images/real/business_creator_handshake.jpg",
+      "submission_notes": "Official campaign announcement story under the illuminated Nati Ruchi sign with the proprietor.",
+      "revision_notes": null,
+      "submitted_at": "2026-11-19T13:01:23.085047",
+      "approved_at": "2026-11-20T13:01:23.085043"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "collaboration_id": 1,
+      "sender_id": 2,
+      "receiver_id": 6,
+      "message_text": "Hi Sarah! Welcome to the campaign. We are so excited to work together on this launch. Let us know when you can drop by for the tasting!",
+      "attachment_url": null,
+      "is_read": 1,
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 2,
+      "collaboration_id": 1,
+      "sender_id": 6,
+      "receiver_id": 2,
+      "message_text": "Thank you! I stopped by yesterday afternoon and filmed 4 great angles. Just uploaded the first Reel draft to our Collaboration Hub for your review!",
+      "attachment_url": null,
+      "is_read": 1,
+      "created_at": "2026-11-20T08:24:18.683567"
+    },
+    {
+      "id": 3,
+      "collaboration_id": 3,
+      "sender_id": 12,
+      "receiver_id": 13,
+      "message_text": "Namaste Aditya! We are delighted to partner with CampusCrew. The student response to the weekend biryani campaign has been wonderful!",
+      "attachment_url": null,
+      "is_read": 1,
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 4,
+      "collaboration_id": 3,
+      "sender_id": 13,
+      "receiver_id": 12,
+      "message_text": "Thank you sir! The in-store reel has already crossed 8,000 local student views, and the counter QR code is getting steady scans daily.",
+      "attachment_url": null,
+      "is_read": 1,
+      "created_at": "2026-11-20T13:01:23.085043"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "title": "Draft Submitted for Review",
+      "message": "Sarah Chen uploaded a draft for 'Fall Nitro Matcha Launch'. Review and approve or request revision.",
+      "link": "#/collaborations/1",
+      "is_read": 0,
+      "created_at": "2026-11-20T08:24:18.683567"
+    },
+    {
+      "id": 2,
+      "user_id": 6,
+      "title": "Campaign Agreement Active",
+      "message": "Your proposal for Urban Roast was accepted. Milestones are in progress.",
+      "link": "#/collaborations/1",
+      "is_read": 1,
+      "created_at": "2026-11-19T08:24:18.683585"
+    }
+  ],
+  "tracking_codes": [
+    {
+      "id": 1,
+      "collaboration_id": 1,
+      "campaign_id": 1,
+      "creator_id": 6,
+      "business_id": 2,
+      "qr_code_id": "QR-URBAN-SARAH-01",
+      "coupon_code": "SARAH15",
+      "discount_percent": 15.0,
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 2,
+      "collaboration_id": 3,
+      "campaign_id": 5,
+      "creator_id": 13,
+      "business_id": 12,
+      "qr_code_id": "QR-NATI-RUCHI-01",
+      "coupon_code": "NATIRUCHI15",
+      "discount_percent": 15.0,
+      "created_at": "2026-11-19T13:01:23.085047"
+    }
+  ],
+  "tracking_events": [
+    {
+      "id": 1,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #101",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 2,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #102",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 3,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #103",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 4,
+      "tracking_code_id": 1,
+      "event_type": "coupon_redemption",
+      "order_value": 18.5,
+      "customer_ref": "Order #A412",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 5,
+      "tracking_code_id": 1,
+      "event_type": "coupon_redemption",
+      "order_value": 24.0,
+      "customer_ref": "Order #A419",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 6,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #104",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 7,
+      "tracking_code_id": 1,
+      "event_type": "coupon_redemption",
+      "order_value": 14.75,
+      "customer_ref": "Order #A430",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 8,
+      "tracking_code_id": 1,
+      "event_type": "confirmed_sale",
+      "order_value": 42.0,
+      "customer_ref": "Order #A445",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 9,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #105",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 10,
+      "tracking_code_id": 1,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Visitor #106",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 11,
+      "tracking_code_id": 1,
+      "event_type": "coupon_redemption",
+      "order_value": 29.5,
+      "customer_ref": "Order #A462",
+      "created_at": "2026-11-19T08:24:18.683585"
+    },
+    {
+      "id": 12,
+      "tracking_code_id": 2,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Campus Visitor #12",
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 13,
+      "tracking_code_id": 2,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Hostel Student #45",
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 14,
+      "tracking_code_id": 2,
+      "event_type": "coupon_redemption",
+      "order_value": 320.0,
+      "customer_ref": "Table #4 - Biryani Combo",
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 15,
+      "tracking_code_id": 2,
+      "event_type": "coupon_redemption",
+      "order_value": 450.0,
+      "customer_ref": "Table #7 - Special Thali Feast",
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 16,
+      "tracking_code_id": 2,
+      "event_type": "qr_scan",
+      "order_value": 0.0,
+      "customer_ref": "Campus Visitor #19",
+      "created_at": "2026-11-19T13:01:23.085047"
+    },
+    {
+      "id": 17,
+      "tracking_code_id": 2,
+      "event_type": "confirmed_sale",
+      "order_value": 650.0,
+      "customer_ref": "Takeaway - Biryani Box (Order #902)",
+      "created_at": "2026-11-19T13:01:23.085047"
+    }
+  ],
+  "deal_payments": [
+    {
+      "id": 1,
+      "collaboration_id": 1,
+      "amount": 300.0,
+      "status": "escrow_held",
+      "tx_reference": "TX-868573C447",
+      "invoice_no": "INV-2026-0081",
+      "paid_at": null,
+      "created_at": "2026-11-19T08:24:18.683585"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "collaboration_id": 2,
+      "author_id": 4,
+      "target_id": 8,
+      "rating": 5,
+      "review_text": "Elena produced phenomenal visual assets! Her GRWM video drove over 40 direct code redemptions in the first 48 hours. Absolute professional.",
+      "communication_rating": 5,
+      "timeliness_rating": 5,
+      "quality_rating": 5,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 2,
+      "collaboration_id": 2,
+      "author_id": 8,
+      "target_id": 4,
+      "rating": 5,
+      "review_text": "Luna Botanicals is such a pleasure to work with! Clear creative guidelines, fast approvals, and payment released immediately upon posting.",
+      "communication_rating": 5,
+      "timeliness_rating": 5,
+      "quality_rating": 5,
+      "created_at": "2026-11-13T08:24:18.683588"
+    },
+    {
+      "id": 3,
+      "collaboration_id": 3,
+      "author_id": 12,
+      "target_id": 13,
+      "rating": 5,
+      "review_text": "CampusCrew and Aditya brought real students right to our dining tables. The orange counter QR standee at our reception counter made it effortless to verify student orders and track the exact footfall. Highly recommended for local restaurants!",
+      "communication_rating": 5,
+      "timeliness_rating": 5,
+      "quality_rating": 5,
+      "created_at": "2026-11-19T13:01:23.085047"
+    }
+  ],
+  "saved_creators": [
+    {
+      "id": 1,
+      "business_id": 2,
+      "creator_id": 6,
+      "notes": "Top candidate for seasonal beverage launches",
+      "created_at": "2026-11-13T08:24:18.683588"
+    }
+  ],
+  "disputes": [],
+  "student_profiles": [
+    {
+      "id": 1,
+      "user_id": 11,
+      "university": "University of Texas at Austin",
+      "major": "Radio-Television-Film (RTF)",
+      "graduation_year": 2026,
+      "skills": "Reel Editing, CapCut, Premiere Pro, Color Grading, Thumbnail Design",
+      "portfolio_links": "https://behance.net/alex_creative",
+      "hourly_rate": 25.0,
+      "bio": "Film student specializing in fast-paced vertical video editing, sound design, and TikTok hooks for local businesses and creators.",
+      "availability": "15-20 hrs/week",
+      "created_at": "2026-11-13T08:24:18.683588"
+    }
+  ],
+  "student_certificates": [
+    {
+      "id": 1,
+      "certificate_uuid": "1f170a23-7cb0-4cc5-8047-24941ada93bb",
+      "student_id": 11,
+      "client_name": "Urban Roast Cafe",
+      "project_title": "Fall Campaign 10-Reel Batch Editing & Sound Design",
+      "skills_demonstrated": "Adobe Premiere Pro, Color Correction, Vertical Formats, Audio Mixing",
+      "completion_date": "2026-11-15",
+      "verification_hash": "b104c5dc76ffc4ae",
+      "created_at": "2026-11-13T08:24:18.683588"
+    }
+  ],
+  "system_settings": [
+    {
+      "key": "student_hub_enabled",
+      "value": "true"
+    },
+    {
+      "key": "platform_commission_percent",
+      "value": "10.0"
+    }
+  ]
+}

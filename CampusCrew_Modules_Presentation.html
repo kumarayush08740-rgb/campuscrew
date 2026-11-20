@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCrew - Platform Modules & Architecture Specification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .slide-container {
+            display: none;
+            width: 100vw;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-container.active {
+            display: flex;
+        }
+        .slide-card {
+            width: 100%;
+            max-width: 1200px;
+            min-height: 650px;
+        }
+        @media print {
+            body {
+                background-color: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .slide-container {
+                display: flex !important;
+                page-break-after: always;
+                min-height: 100vh;
+                padding: 1cm;
+            }
+            .slide-card {
+                border: 1px solid #e2e8f0 !important;
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                box-shadow: none !important;
+            }
+            .text-white {
+                color: #0f172a !important;
+            }
+            .text-slate-100, .text-slate-300, .text-slate-400 {
+                color: #334155 !important;
+            }
+            .bg-slate-900\/80, .bg-slate-950 {
+                background-color: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+
+    <!-- Top Floating Toolbar -->
+    <header class="no-print fixed top-4 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 px-6 py-2.5 rounded-full shadow-2xl z-50 flex items-center gap-4">
+        <div class="flex items-center gap-2 pr-4 border-r border-slate-700">
+            <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+            <span class="font-bold text-sm tracking-tight text-white">CampusCrew</span>
+            <span class="text-[11px] text-indigo-400 bg-indigo-950 px-2 py-0.5 rounded-full border border-indigo-800">Presentation Deck</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <button onclick="prevSlide()" class="p-1.5 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <span id="slideCounter" class="text-xs font-mono text-slate-300 min-w-[70px] text-center">Slide 1 / 20</span>
+            <button onclick="nextSlide()" class="p-1.5 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+        
+        <div class="flex items-center gap-2 pl-4 border-l border-slate-700">
+            <button onclick="window.print()" class="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition shadow-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                Print / Save PDF
+            </button>
+            <a href="CampusCrew_Modules_Presentation.pdf" download class="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition border border-slate-700">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Direct PDF
+            </a>
+        </div>
+    </header>
+
+    <!-- Slide Deck Container -->
+    <main class="w-full min-h-screen flex items-center justify-center">
+        
+        <!-- SLIDE 1 -->
+        <section class="slide-container active" id="slide-1">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PROJECT LAUNCH & MASTER ARCHITECTURE
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 1 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">CampusCrew - Platform Master Specification</h2>
+                    <p class="text-slate-400 text-sm mt-1">Where Local Businesses Meet Creators, and Talent Turns Into Opportunity</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Platform Core Mission</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Core Identity</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Bridge local businesses & brands with hyperlocal micro-influencers.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Provide verified conversion tracking (QR & Coupon redemptions).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Protect creators with transparent agreements, milestones & payouts.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Engineered as a high-performance, real-world full-stack web application.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Dual Phasing Strategy</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Phased Delivery</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Phase 1: Dual Creator & Business Marketplace (20 Modules).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Phase 2: Modular Student Talent Hub & Certificate Engine (6 Modules).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Admin Governance & Audit Center for platform-wide dispute handling.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Production-ready data integrity with zero fake analytics or fake escrow.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 2 -->
+        <section class="slide-container " id="slide-2">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            SYSTEM ARCHITECTURE & TECH STACK
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 2 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Modern Full-Stack Technical Stack</h2>
+                    <p class="text-slate-400 text-sm mt-1">Modular, Scalable, Secure & Reactive Architecture</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-3 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Frontend & UI Layer</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Frontend</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Next.js 14 / React 18 with TypeScript for type-safe components.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Tailwind CSS with custom design tokens (Clean startup aesthetic).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Lucide React Icons + Framer Motion for subtle, purposeful micro-animations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Fully responsive viewport system: Desktop, Laptop, Tablet & Mobile.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Backend, DB & Real-Time</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Backend & DB</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Node.js API Routes / Express REST endpoints with server-side validation.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>PostgreSQL / SQLite with Prisma ORM (18 relational models).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>WebSockets / Polling fallback for real-time messaging & alerts.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Zod schema validation on every single API route and mutation.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Auth, Security & Storage</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Security</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Bcrypt password hashing & JWT / HTTP-only secure session cookies.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Strict Role-Based Access Control (RBAC) guards on all protected routes.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Safe media/portfolio upload validation with strict MIME & size limits.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>No API keys, credentials, or private addresses exposed to frontend.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 3 -->
+        <section class="slide-container " id="slide-3">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            AUTHENTICATION & ROLES
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 3 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">User Roles & Access Control Matrix</h2>
+                    <p class="text-slate-400 text-sm mt-1">Role-Based Permissions & Strict Multi-Tenant Data Isolation</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-3 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Role A: Business / Brand</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Business</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Create business entity, location, category & budget profile.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Post campaigns, browse/shortlist creators, review inbound bids.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Generate unique tracking QR/Coupons & view verifiable ROI dashboards.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Sign collaboration contracts & submit post-completion ratings.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Role B: Content Creator</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Creator</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Build verified media kit: niche, location, verified handles & portfolio.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Browse campaigns, submit tailored proposals with deliverables & fees.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Access Collaboration Hub to submit drafts, log revisions & track pay.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Build transparent reputation score based on reliable deliveries.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Role C: Super Administrator</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Super Admin</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Full system oversight: dispute mediation & verification reviews.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Audit log of all sensitive admin mutations & fraud flags.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Content moderation (reports, reviews, campaigns, portfolios).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Feature-flag toggle for Student Talent Hub modular activation.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 4 -->
+        <section class="slide-container " id="slide-4">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 1 & 2
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 4 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Profiles & Smart Creator Discovery</h2>
+                    <p class="text-slate-400 text-sm mt-1">Rich Digital Media Kits & Granular Marketplace Filtering</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 1: User Profile Ecosystem</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 1</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Business Profile: Category, bio, logo, past campaigns, reviews received.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creator Media Kit: Niche, primary platforms, audience demographic tags.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Portfolio showcase: Verified video/reel embeds, previous campaign stats.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Privacy Guarantee: Residential addresses never exposed publicly.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 2: Smart Discovery Engine</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 2</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Granular Multi-Filter: Location, category, budget bracket, platform.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Engagement rate & audience relevance weighting.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Side-by-side Creator Comparison tray (rates, deliverables, past ratings).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>One-click 'Send Direct Collaboration' or 'Add to Saved Shortlist'.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 5 -->
+        <section class="slide-container " id="slide-5">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 3 & 4
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 5 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Hyperlocal Matching & Budget Intelligence</h2>
+                    <p class="text-slate-400 text-sm mt-1">Geographic Proximity Engine & Algorithmic Campaign Planning</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 3: Hyperlocal Matching Engine</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 3</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Proximity calculation between business location & creator radius.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Audience verification transparency: Self-reported vs Verified flags.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Cross-matching of campaign target neighborhood with creator reach.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>High relevance weighting for local community impact.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 4: Budget-to-Campaign Intelligence</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 4</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Input budget, objective (Footfall, Brand Awareness, Sales), and niche.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Dynamic creator bundle recommendations fitting the exact budget.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Clear disclaimer: Outcome estimates are models, never guarantees.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Pre-configured deliverable packages (e.g., 2 Reels + 3 Stories + 1 Event Visit).</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 6 -->
+        <section class="slide-container " id="slide-6">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 5 & 6
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 6 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Campaign Marketplace & Opportunity Score</h2>
+                    <p class="text-slate-400 text-sm mt-1">End-to-End Campaign Lifecycle & Multi-Factor Compatibility Scoring</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 5: Campaign Marketplace</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 5</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Campaign creation: Title, objective, budget, niche, deliverables, deadline.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Supports both Paid & Barter collaboration models.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Strict 9-State Lifecycle: Draft -> Published -> Applications Open -> Under Review -> Accepted -> In Progress -> Submitted -> Completed -> Cancelled.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creators apply with proposed deliverables, timeline & pricing.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 6: Creator Opportunity Score</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 6</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Transparent 0-100 score shown to businesses on every applicant.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Scoring Factors: Location match (25%), Niche (25%), Budget (20%), Reliability & On-Time delivery (20%), Engagement Quality (10%).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Zero follower-bias: Micro-creators with high engagement rank top.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Clear 'Why this Creator Matches' bulleted justification breakdown.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 7 -->
+        <section class="slide-container " id="slide-7">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 7 & 8
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 7 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Collaboration Hub & Secure Messaging</h2>
+                    <p class="text-slate-400 text-sm mt-1">Central Workspace for Execution, Deliverable Approval & Communication</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 7: Collaboration Management Hub</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 7</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Dedicated shared workspace for every accepted campaign contract.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Scope agreement: Deliverable checklist, deadline countdown, revision tracker.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Content Submission Portal: Creator uploads draft reel/post links.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Two-stage Approval Flow: Business approves or requests revision with notes.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 8: Messaging & Notification Center</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 8</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Contextual Direct Messaging attached to specific collaborations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Read receipts, message timestamps & file attachment support.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Automated alerts: Proposal received, draft submitted, revision requested.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Deadline countdown warnings (48h, 24h before submission cutoff).</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 8 -->
+        <section class="slide-container " id="slide-8">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 9 & 10
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 8 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Conversion Tracking & ROI Dashboard</h2>
+                    <p class="text-slate-400 text-sm mt-1">Real-World Attribution: QR Codes, Creator Coupons & Clear Analytics</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 9: Campaign Conversion Tracking</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 9</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Unique SVG/PNG QR Code generator for in-store footfall tracking.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creator-specific promo codes (e.g., CREW-SARAH-15) for checkout attribution.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Strict funnel distinction: Scan != Lead != Redeemed Sale.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Prevents false attribution: Scans logged separately from transactions.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 10: Campaign ROI Dashboard</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 10</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Visual charts: Spend vs Verified Conversions over campaign lifetime.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Cost Per Acquisition (CPA) & Cost Per Verified Lead calculations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creator performance breakdown: Compare which creator drove top results.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Exportable PDF/CSV summary reports for business accounting.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 9 -->
+        <section class="slide-container " id="slide-9">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 11 & 12
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 9 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Trust System & Mutual Reviews</h2>
+                    <p class="text-slate-400 text-sm mt-1">Two-Way Accountability, Verified Badges & Anti-Abuse Safeguards</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 11: Verification & Trust System</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 11</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Social profile verification with connected profile URL checks.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Visual badge distinctions: 'Verified Business' & 'Verified Creator'.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Portfolio proof check: Admin-approved past collaboration links.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Flagging mechanism for suspect engagement or fake follower spikes.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 12: Mutual Ratings & Reviews</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 12</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Two-way reviews: Business rates creator, creator rates business.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Gated to Completed Collaborations only: Zero fake reviews possible.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>One review per collaboration to prevent rating manipulation.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Rating metrics: Communication, Timeliness, Content Quality, Payment.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 10 -->
+        <section class="slide-container " id="slide-10">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 13 & 14
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 10 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Creator Protection & Deal Management</h2>
+                    <p class="text-slate-400 text-sm mt-1">Transparent Collaboration Agreements & Transparent Payment Records</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 13: Creator Protection System</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 13</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Standardized Collaboration Agreement generated on contract acceptance.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Enforced revision cap (Default: 2 revisions) preventing scope creep.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Clear cancellation policy: Partial compensation for work already drafted.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Built-in Dispute Escalation button submitting ticket to Super Admin.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 14: Payment & Deal Management</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 14</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Deal ledger: Tracks Pending, In-Progress, Released, and Paid fees.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Transaction reference number & invoice/receipt generation.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Zero fake escrow: Clearly labels milestone release states.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Card data compliance: PCI-compliant gateway integration hooks.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 11 -->
+        <section class="slide-container " id="slide-11">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 15 & 16
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 11 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Multi-Creator Bundles & Open Bids</h2>
+                    <p class="text-slate-400 text-sm mt-1">Multi-Talent Campaign Management & Open Reverse-Auction Bidding</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 15: Multi-Creator Campaign Bundles</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 15</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Aggregate 2-10 creators under a single umbrella brand campaign.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Unified campaign budget breakdown with individual creator allocations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Consolidated timeline & deliverable master-schedule for brand managers.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Aggregated campaign analytics dashboard combining all creator reach.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 16: Open Collaboration Bids</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 16</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Reverse RFP: Business publishes target problem and budget ceiling.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creators pitch unique creative angles, content hooks & custom prices.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Business compares incoming pitches side-by-side in bid review tray.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Direct 1-click contract acceptance and conversion to active project.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 12 -->
+        <section class="slide-container " id="slide-12">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 17 & 18
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 12 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">AI Content Brief Generator & Dashboards</h2>
+                    <p class="text-slate-400 text-sm mt-1">Smart Creative Ideation & Role-Tailored Command Centers</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 17: Content Brief Generator</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 17</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Input category, target audience, and campaign objective.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Generates 3 Reel hooks, storyboards, caption concepts & CTA suggestions.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Reliable fallback engine: 50+ curated high-converting local templates.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>AI Integration hook ready (Gemini API) with zero-failure offline mode.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 18: Dual Role-Specific Dashboards</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 18</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Business Dashboard: Spend tracker, active collabs, conversion stats, quick-hire.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creator Dashboard: Incoming campaign invites, active deadlines, pending payouts.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Real-time summary widgets: Unread messages, tasks requiring review.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Fast action buttons: 'Post New Campaign' / 'Browse Matching Gigs'.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 13 -->
+        <section class="slide-container " id="slide-13">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            PHASE 1 - MODULES 19 & 20
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 13 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Discovery Map & Favourites / Repeat Gigs</h2>
+                    <p class="text-slate-400 text-sm mt-1">Interactive Geographic Search & Fast-Track Re-Hiring Workflows</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 19: Local Creator Discovery Map</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 19</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Interactive Leaflet/Map view pinning creators by neighborhood / campus.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Privacy First: Pins reflect city/locality center, never exact residences.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Hover cards display creator niche, engagement score & starting rates.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Radius slider (1km, 5km, 15km, 30km) centered on business storefront.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module 20: Favourites & Repeat Deals</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Module 20</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Create customized creator shortlists (e.g. 'Weekend Cafe Promos').</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Past Collaboration History: One-click 'Re-Hire for New Campaign'.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Pre-filled deliverables based on successful previous collaborations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Special repeat-client rate negotiation options.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 14 -->
+        <section class="slide-container " id="slide-14">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            FUTURE EXPANSION - MODULES 21 TO 26
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 14 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Modular Student Talent Hub</h2>
+                    <p class="text-slate-400 text-sm mt-1">Independent Subsystem: Freelance Gigs, Micro-Services & Verified Certificates</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-3 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Modules 21 & 22: Gigs & Skill Match</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Modular</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Freelance catalog: Video Editing, Reels, Graphic Design, Captions, Socials.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Businesses & Creators can hire student talent for post-production.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Skill-based matching engine filtering by software, tools & availability.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Student portfolio cards featuring verified Figma/Canva/Drive links.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Modules 23 & 24: Certificate Engine</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Certificates</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Verified Experience Certificates issued upon successful project approval.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Unique Certificate ID + tamper-proof verification page with QR code.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Student profile showcases certified work hours & skill ratings.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Zero fake certificates: Locked until client submits final sign-off.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Modules 25 & 26: Retainers & Growth</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Growth Hub</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Monthly social media packages: Hire student teams on monthly retainers.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Shared content calendar with scheduled deliverable milestones.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Student Opportunity Hub: Free webinars, project bounties, career guides.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Feature-flagged: Can be turned on/off without affecting Core Phase 1.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 15 -->
+        <section class="slide-container " id="slide-15">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            GOVERNANCE & PLATFORM OPERATIONS
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 15 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Super Admin Panel & Dispute Center</h2>
+                    <p class="text-slate-400 text-sm mt-1">Comprehensive Administrative Control, Content Moderation & Auditing</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">User & Campaign Governance</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Moderation</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Manage all Business, Creator, and Student accounts with ban/flag tools.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Campaign moderation queue: Review flagged or suspicious listings.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Review moderation queue: Prevent slander or retaliatory fake reviews.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Creator badge verification approvals (checking connected socials).</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Dispute Resolution & Audit Logs</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Disputes & Logs</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Dispute Center: Examine chat history, uploaded drafts & contract terms.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Admin resolution actions: Rule in favor of creator or refund business.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Complete Audit Log: Records every administrative intervention with timestamp.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Feature Flag Management: Toggle Student Talent Hub visibility.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 16 -->
+        <section class="slide-container " id="slide-16">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            DATA ARCHITECTURE
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 16 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Relational Database Schema & Entities</h2>
+                    <p class="text-slate-400 text-sm mt-1">18 Structured Models Ensuring Complete Data Integrity & Relational Soundness</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-3 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Core Platform Entities (1-6)</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Core Entities</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>User (id, email, password_hash, role, status, created_at)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>BusinessProfile (user_id, name, category, location, bio, logo)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>CreatorProfile (user_id, niche, location, bio, platforms, rates)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Campaign (id, business_id, title, budget, objective, status)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>CampaignApplication (id, campaign_id, creator_id, bid_price, status)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Collaboration (id, campaign_id, business_id, creator_id, terms, status)</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Workflow & Tracking Entities (7-12)</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Attribution & Ops</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>DeliverableItem (collab_id, title, type, status, draft_url)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>ChatMessage (collab_id, sender_id, receiver_id, message, read)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Notification (user_id, title, message, link, read, created_at)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>TrackingCode (campaign_id, creator_id, qr_code, coupon_code)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>TrackingEvent (code_id, event_type [SCAN/COUPON/LEAD], timestamp)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>DealPayment (collab_id, amount, status, tx_ref, paid_at)</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Trust, Student & Audit Entities (13-18)</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Trust & Expansion</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Review (collab_id, author_id, target_id, rating, comment)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>VerificationRequest (user_id, document_url, status, reviewed_by)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>StudentProfile (user_id, university, skills, portfolio_links)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>StudentCertificate (student_id, project_title, client_id, cert_id)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>DisputeTicket (collab_id, raised_by, reason, status, resolution)</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>AuditLog (admin_id, action, target_entity, details, created_at)</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 17 -->
+        <section class="slide-container " id="slide-17">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            NON-FUNCTIONAL SPECIFICATIONS
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 17 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Security, Performance & Reliability</h2>
+                    <p class="text-slate-400 text-sm mt-1">Enterprise Standards Baked into Platform Foundations</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-3 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Rigorous Security Standards</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Security</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Bcrypt password hashing (salt rounds 10+) & CSRF protection.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Input sanitization preventing SQL injection & XSS scripting.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Rate limiting on auth & sensitive API routes (10 req/min for auth).</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Protected file upload pipelines with mime-type checking.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">High Performance Benchmarks</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Performance</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Lighthouse performance target > 90 across mobile & desktop.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Pagination on all marketplace grids & database queries.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Debounced search inputs & cached public creator directories.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Lazy loading images, modular code-splitting & optimistic UI updates.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Reliability & Resilience</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Reliability</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Comprehensive Error Boundaries preventing cascade page crashes.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Structured empty states, loading skeletons & informative tooltips.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Fallback template algorithms for AI brief generator if offline.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Zero broken buttons or placeholder non-functional links.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 18 -->
+        <section class="slide-container " id="slide-18">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            USER JOURNEYS
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 18 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">End-to-End User Experience Flows</h2>
+                    <p class="text-slate-400 text-sm mt-1">Step-by-Step Experience Mapping for Both Core Personas</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Business Persona Journey</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Business Journey</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>1. Onboarding: Register business, define location & marketing goals.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>2. Discovery: Search creators by locality & compare opportunity scores.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>3. Campaign Launch: Post campaign budget & deliverables in marketplace.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>4. Collaboration: Accept bids, approve draft content & monitor deadlines.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>5. Attribution: Track in-store QR scans & coupon redemptions in real time.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>6. Closeout: Release payment, generate invoice & write mutual review.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Creator Persona Journey</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Creator Journey</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>1. Onboarding: Build profile, link social handles & showcase top reels.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>2. Exploration: Filter campaigns matching niche & hyperlocal radius.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>3. Bidding: Apply with custom creative proposal & deliverable fees.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>4. Production: Receive agreement, create drafts & upload to Collab Hub.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>5. Revision: Address brand feedback within agreed 2-revision limit.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>6. Payout: Final content approved, track deal payout & receive 5-star review.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 19 -->
+        <section class="slide-container " id="slide-19">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            DELIVERY ROADMAP
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 19 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Iterative Development & Build Roadmap</h2>
+                    <p class="text-slate-400 text-sm mt-1">Systematic Implementation Steps Towards Complete Working Product</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-4 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Milestone 1: Foundations & Auth</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Sprint 1</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Next.js + Tailwind project setup, design system & typography.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Database schema setup with Prisma ORM & migrations.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Secure dual-role authentication & session state management.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Milestone 2: Marketplace & Match</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Sprint 2</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Business & Creator profile pages with rich media kit display.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Smart Creator Discovery marketplace with filters & compare tray.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Hyperlocal matching algorithm & budget-to-campaign planner.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Milestone 3: Campaigns & Collab</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Sprint 3</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Campaign creation, application & reverse bidding workflows.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Collaboration Hub with deliverable checklists & draft submissions.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Messaging system, notifications & automated deadline alerts.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Milestone 4: Tracking & Final Polish</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Sprint 4</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>QR & coupon conversion engine + real-time ROI analytics dashboard.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Mutual review system, payment ledger & Super Admin panel.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Student Talent Hub modular shell & complete end-to-end verification.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SLIDE 20 -->
+        <section class="slide-container " id="slide-20">
+            <div class="slide-card bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col justify-between p-8 relative">
+                <!-- Top Accent Line -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                
+                <!-- Slide Header -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 uppercase tracking-wider">
+                            FINAL VERIFICATION & SIGN-OFF
+                        </span>
+                        <span class="text-xs font-medium text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+                            Slide 20 / 20
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mt-1">Cross-Check Sign-Off & Green Light</h2>
+                    <p class="text-slate-400 text-sm mt-1">Review Confirmation Before Proceeding to Complete Website Code Construction</p>
+                </div>
+                
+                <!-- Slide Body / Cards Grid -->
+                <div class="grid grid-cols-2 gap-5 my-6 flex-1 items-stretch">
+                    
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Module Verification Checklist</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Review Points</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Are all 20 Phase-1 core marketplace modules aligned with your vision?</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Is the dual-role authentication & access control matrix approved?</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Are the QR & coupon conversion tracking requirements complete?</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Is the modular Student Talent Hub architecture accepted for future expansion?</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="bg-slate-900/80 border border-slate-700/60 rounded-xl p-5 flex flex-col justify-between shadow-lg backdrop-blur hover:border-indigo-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-3.5 pb-2 border-b border-slate-800">
+                            <h3 class="font-semibold text-slate-100 text-base tracking-tight">Next Step: Build Execution</h3>
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Action Plan</span>
+                        </div>
+                        <ul class="space-y-2.5">
+                            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Upon your confirmation, the entire working application will be created.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>Every component will be fully functional with real persisted data.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>A responsive, live local dev server will be started for interactive testing.</span>
+                </li>
+            
+                <li class="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
+                    <span class="text-indigo-400 font-bold mt-0.5 select-none">▸</span>
+                    <span>No mockup buttons, no fake analytics, and zero placeholder stubs.</span>
+                </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            
+                </div>
+                
+                <!-- Slide Footer -->
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-medium text-slate-300">CampusCrew Architecture & Specification Master</span>
+                    </div>
+                    <span>For Cross-Check & Sign-Off Prior to Website Development</span>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Bottom Keyboard Shortcut Hint -->
+    <footer class="no-print fixed bottom-3 left-1/2 -translate-x-1/2 text-[11px] text-slate-500 bg-slate-900/60 backdrop-blur px-4 py-1 rounded-full border border-slate-800">
+        Use <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">→</kbd> arrow keys or <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Space</kbd> to navigate slides
+    </footer>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 20;
+
+        function showSlide(n) {
+            if (n < 1) n = 1;
+            if (n > totalSlides) n = totalSlides;
+            currentSlide = n;
+            
+            document.querySelectorAll('.slide-container').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            const activeEl = document.getElementById('slide-' + currentSlide);
+            if (activeEl) {
+                activeEl.classList.add('active');
+            }
+            
+            document.getElementById('slideCounter').textContent = `Slide ${currentSlide} / ${totalSlides}`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                prevSlide();
+            } else if (e.key === 'Home') {
+                showSlide(1);
+            } else if (e.key === 'End') {
+                showSlide(totalSlides);
+            }
+        });
+    </script>
+</body>
+</html>
